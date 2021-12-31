@@ -28,7 +28,7 @@ export default function Footer() {
                     
                 </div>
             </div>
-            Abdul Auwal © 2021
+            Abdul Auwal © 2022
         </footer>
     )
 }
