@@ -97,6 +97,10 @@
     margin-bottom:2em;
 }
 
+.phone-case-table-two>div:first-child>img{
+    margin-top: -3em;
+}
+
 .phone-case-table-two>div>h2{
     margin-bottom:.5em;
 }
@@ -247,5 +251,9 @@
         height: 30em;
         margin-bottom: 5em;
     }
+    .phone-case-table-two>div:first-child>img{
+        margin-top: 0;
+    }
+    
 
 }
