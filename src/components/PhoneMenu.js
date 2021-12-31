@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import AA from "../img/AA.png"
 import bdul from "../img/bdulauwal.png"
 import medal from "../img/arrow.png"
+import useDocumentScrollThrottled from './scrollFunction'
+
 export default function PhoneMenu() {
     const [showMenu, setShowMenu]= useState(false)
     let navClasses = "phoneMenu"
@@ -10,12 +12,31 @@ export default function PhoneMenu() {
         navClasses = "phoneMenu open"
         
     }
-    
+    const [shouldHideHeader, setShouldHideHeader] = useState(false);
+    const [shouldShowShadow, setShouldShowShadow] = useState(false);
+  
+    const MINIMUM_SCROLL = 50;
+    const TIMEOUT_DELAY = 50;
+  
+    useDocumentScrollThrottled(callbackData => {
+      const { previousScrollTop, currentScrollTop } = callbackData;
+      const isScrolledDown = previousScrollTop < currentScrollTop;
+      const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+  
+      setShouldShowShadow(currentScrollTop > 2);
+  
+      setTimeout(() => {
+        setShouldHideHeader(isScrolledDown && isMinimumScrolled);
+      }, TIMEOUT_DELAY);
+    });
+  
+    const shadowStyle = shouldShowShadow ? 'shadow' : '';
+    const hiddenStyle = shouldHideHeader ? 'hidden' : '';
     
     return (
         <span>
             <span className="MenuBottonSpan"  >
-            <span alt="menu" className="MenuBotton" onClick={()=>setShowMenu(!showMenu)}>Menu</span>
+            <span alt="menu" className={`MenuBotton ${shadowStyle} ${hiddenStyle}`} onClick={()=>setShowMenu(!showMenu)}>Menu</span>
             {menu}
             </span>
             

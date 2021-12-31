@@ -1,6 +1,26 @@
 
 .phoneLogo{height: 6em;width:10em;}
-.MenuBotton{position:fixed;width:1.7em; height:1.7em;right:9%;top:2%;z-index: 4;cursor: pointer;color:#FF3D00;}
+.MenuBotton {
+    position:fixed;
+    width:1.7em; 
+    height:1.7em;
+    right:9%;
+    top:1.7%;
+    z-index: 4;
+    cursor: pointer;
+    color:#FF3D00;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.MenuBotton.shadow{
+    box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
+}
+  
+.MenuBotton.hidden{
+    transform: translateY(-130%);
+}
+  
 .contactSec{position: relative;bottom:4.3em;}
 .contactFlex{display: flex;}
 .leftContact{text-align: left; font-weight: bolder; color:rgb(185, 114, 7); margin-bottom: 2em;}
