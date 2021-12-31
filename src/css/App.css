@@ -1,0 +1,99 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: sansationItalic;
+  src: url(../img/Sansation_Italic.ttf);
+}
+
+@font-face {
+  font-family: sansationNorm;
+  src: url(../img/Sansation_Light.ttf);
+}
+
+@font-face {
+  font-family: sansationBold;
+  src: url(../img/Sansation_Bold.ttf);
+}
+
+
+@import "./shared/header.css";
+@import "./shared/home.css";
+@import "./shared/work.css";
+@import "./shared/case-study.css";
+@import "./shared/weecount.css";
+@import "./shared/phone-menu.css";
+
+.main-content{
+  min-height: 100%;
+  margin-bottom: -100px; 
+  width: 100%;
+}
+
+.main-content::after{
+  content: "";
+  display: block;
+  height: 100px;
+}
+
+footer{
+  height:14em; 
+  position: relative;
+  bottom: 0%;
+  left:0%;
+  background-position: center;
+  font-family:sans-serif;
+  text-align: center;
+  background-image: url(../img//blackrec.jpg);
+  padding:2em;
+  color: white;
+}
+
+footer>hr{
+height: 5px;
+background: #C4C4C4;
+border: none;
+margin-bottom: 2em;
+}
+
+.lets-work{
+  text-align: right;
+  margin-bottom: 2em;
+}
+
+.footer-flex{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+}
+
+.connect-img{
+  height: 1.5em;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.footer-connect-div{
+  width: 50%;
+  text-align: left;
+}
+
+.footer-hello-div{
+  width: 50%;
+  text-align: right;
+}
+
+.color-two{
+  color: #FF3D00;
+  margin-top: 1em;
+}
+
+.margin-top{
+  margin-top: 1.5em;
+  margin-bottom: 5em;
+}
+.no-line-link{
+  text-decoration:none;
+}

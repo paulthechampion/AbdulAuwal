@@ -1,0 +1,118 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.testDiv{
+    background-image: url(../../img//blackrec.jpg);
+    height: 50em;
+    padding-top: 3em;
+    
+    
+}
+
+.contact-div{
+    height: 40em;
+}
+
+.homeMemeDiv{
+    position: relative;
+    right:1.2em;
+    margin: 4em;
+}
+
+.homeMemeSubDiv{
+    text-align:center;
+    border-radius: 50%;
+    background-color: white;
+    width: 18em;
+    height: 18em;
+    text-align: center;
+    
+}
+.homeMeme{
+    padding-top: 1.5em;
+    height: 15em;
+}
+
+.homeWrite{
+    width: 90%;
+    padding-left: 2em;
+    line-height: 1.5em;
+    padding-top: 3em;
+    color: white;
+    font-family: sansationNorm;
+}
+
+.homeWrite>h2{
+    font-family: sansationItalic;
+    color:#FF8A00;
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+.about-me-h2{
+    margin-top: .5em;
+}
+
+.about-down-p{
+    margin-top: -2em;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.color-text{
+    color:#FF8A00;
+}
+
+.contact-div{
+    background-color: white;
+    background-image: unset;
+}
+
+.contact-div-p{
+    color: black;
+    font-family: sansationBold;
+}
+
+.contactMemeDiv{
+    background-image:url(../../img//blackrec.jpg) ;
+}
+
+@media(max-width :360px){
+    .testDivprob{
+        height:55em;
+    }
+}
+
+@media(min-width :390px){
+    .homeMemeDiv{
+        position: relative;
+        right:0;
+    }
+
+
+}
+
+
+@media(min-width :1085px){
+    .testDiv{
+        display: flex;
+        flex-wrap: wrap;
+        height: 25em;
+        padding-bottom: 2em;
+    }
+    .homeWrite{
+        width: 40%;
+        padding: 0;
+        padding-top: 3em;
+        padding-left: 5em;
+        margin-right: 13em;
+    }
+    .homeMemeDiv{
+        width: 20%;
+    }
+    .about-me-h2{
+        margin-top: 3em;
+    }
+}
